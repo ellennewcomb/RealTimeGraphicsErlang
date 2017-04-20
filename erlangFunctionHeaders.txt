@@ -1,0 +1,68 @@
+%Headers for all the library functions in Erlang to facilitate writing new programs
+
+sdl_Init(_flags) ->
+	%call the function for initialising sdl with _flags
+	"Nif not loaded - sdl_Init()".
+
+sdl_Quit()->
+	%Calls the sdl_Quit function which releases all surfaces and whatnots
+	"Nif not loaded - sdl_Quit".
+
+sdl_CreateSurface(_name) ->
+	%NEW FUNCTION FOR ERLANG - Create a surface and set it to null
+	"Nif not loaded - sdl_CreateSurface".
+
+sdl_SetVideoMode(_width,_height,_bpp,_flags, _surface) ->
+	%Call the function for setting the video
+	"Nif not loaded - sdl_SetVideoMode()".
+	
+sdl_LoadBMP(_fileName,_surface) ->
+	%Call the function for loading a bmp file
+	"Nif not loaded - sdl_LoadBMP()".
+
+sdl_BlitSurface(_source,_sourceRect,_surface,_position) ->
+	%Call the function SDL_BlitSurface (here used to set the bmp to a surface)
+	"Nif not loaded - sdl_BlitSurface()".
+
+sdl_Flip(_surface) ->
+	%Calls the SDL_Flip function to swap screen buffers
+	"Nif not loaded - sdl_Flip()".
+	
+sdl_Delay(_time) ->
+	%Calls the function to wait for _time ms
+	"Nif not loaded - sdl_Delay".
+
+sdl_FreeSurface(_surface) ->
+	%Calls the function to free _surface from use
+	"Nif not loaded - sdl_FreeSurface".
+	
+sdl_UpdateRect(_surface, _x,_y, _w, _h) ->
+	%Calls the function to update a particular rectangle
+	"Nif not loaded - sdl_UpdateRect".
+	
+sdl_GetPixelFormat(_surface) ->
+	%NEW FUNCTION FOR ERLANG - Returns the contents of a surfaces pixel format in a list
+	%PLEASE BE AWARE the palette is not passed as it is a pointer! What is passed is infact the name of the surface the palette belongs to.
+	"Nif not loaded - sdl_GetPixelFormat".
+	
+sdl_MapRGB(_name,_format, _r, _g, _b) ->
+	%As of this moment in time, only supports formats that exist. (Strings only here folks.)
+	%Calls the sdl_MapRGB function. If the format passed is a string the function will assume it belongs to a surface. Otherwise it expects a list of format info.
+	"Nif not loaded - sdl_MapRGB".
+	
+sdl_MUSTLOCK(_surface)->
+	%Returns true if surface must be locked for access. False otherwise (or error)
+	"Nif not loaded - sdl_MUSTLOCK".
+	
+sdl_LockSurface(_surface)->
+	%Lock a surface, return 0 if all's well, return error if not possible
+	"Nif not loaded - sdl_LockSurface".
+	
+sdl_UnlockSurface(_surface)->
+	%Unlock a surface, return 0 if alls well
+	"Nif not loaded - sdl_UnlockSurface".
+	
+sdl_SetPixel(_surface, _X, _Y, _NewPixel)->
+	%NEW FUNCTION FOR ERLANG
+	%Allows the user to set a pixel value in a surface
+	"Nif not loaded - sdl_UnlockSurface".
